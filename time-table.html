@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classwise Time Table (EVEN Term 2024-25) - Branch: 3BCEE</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f9fbfc;
+        color: #333;
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        margin: 10px 0;
+        letter-spacing: 1px;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+      #daySelect {
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+      #daySelect:focus {
+        outline: none;
+        border-color: #007acc;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        transition: background 0.3s, transform 0.2s;
+      }
+      th {
+        background: #e6f2fa;
+        font-weight: 600;
+      }
+      /* Cell hover effect */
+      td:hover {
+        background: #f0f8ff;
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* Highlight selected day's cells */
+      tbody tr.visible td {
+        background: #d0eaff;
+      }
+      tr.hidden {
+        display: none;
+      }
+      .note {
+        margin-top: 20px;
+        text-align: right;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Computer Science & Engineering Department</h1>
+    <h2>Classwise Time Table (EVEN Term 2024-25)<br />Branch: 3BCEE</h2>
+    <div class="controls">
+      <label for="daySelect">Show Day: </label>
+      <select id="daySelect">
+        <option value="ALL">ALL</option>
+        <option>MON</option>
+        <option>TUE</option>
+        <option>WED</option>
+        <option>THU</option>
+        <option>FRI</option>
+        <option>SAT</option>
+      </select>
+    </div>
+    <table id="timetable">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>7:45-8:40</th>
+          <th>8:40-9:35</th>
+          <th>9:50-10:45</th>
+          <th>10:45-11:40</th>
+          <th>11:40-12:35</th>
+          <th>12:35-1:30</th>
+          <th>1:30-2:25</th>
+          <th>2:25-3:20</th>
+          <th>3:20-4:15</th>
+          <th>4:30-5:25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-day="MON">
+          <td>MON</td>
+          <td>ECO<br />HSKM W304</td>
+          <td>ICC<br />MNB W304</td>
+          <td colspan="2">
+            DE PSK W5112 E2<br />OOP SD W5011 E1<br />DS AV W5066 E3
+          </td>
+          <td></td>
+          <td></td>
+          <td>MFCS<br />JAP W303</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr data-day="TUE">
+          <td>TUE</td>
+          <td></td>
+          <td>ECO ET1<br />HJT W304</td>
+          <td>OOP<br />SD W303</td>
+          <td></td>
+          <td></td>
+          <td>DE<br />PC W305</td>
+          <td>DS<br />MZ W305</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr data-day="WED">
+          <td>WED</td>
+          <td></td>
+          <td></td>
+          <td colspan="2">
+            DE SD W5112 E1<br />OOP SGP W505 E3<br />DS MZ E4031 E2
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            ICC ET1<br />MSM W303<br />ICC ET2<br />MNB W305<br />ICC ET3<br />MST
+            W308
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr data-day="THU">
+          <td>THU</td>
+          <td>MFCS ET2<br />JAP W302</td>
+          <td>ICC<br />MNB W305</td>
+          <td colspan="2">
+            OOP CFBU W5064 E2<br />DS KP W5065 E1<br />DE PC W507 E3
+          </td>
+          <td></td>
+          <td>MFCS<br />JAP W304</td>
+          <td>ECO ET3<br />HKA W304<br />ECO ET2<br />HSKM W305</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr data-day="FRI">
+          <td>FRI</td>
+          <td></td>
+          <td>OOP<br />SD W304</td>
+          <td>ECO<br />HVV W302</td>
+          <td>MFCS ET3<br />AK W303<br />MFCS ET1<br />CT W308</td>
+          <td></td>
+          <td>DE<br />PC W303</td>
+          <td>DS<br />MZ W303</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr data-day="SAT">
+          <td>SAT</td>
+          <td colspan="10"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note"></div>
+    <script>
+      const select = document.getElementById("daySelect");
+      const rows = document.querySelectorAll("#timetable tbody tr");
+      select.addEventListener("change", () => {
+        const val = select.value;
+        rows.forEach((r) => {
+          const isMatch = val === "ALL" || r.getAttribute("data-day") === val;
+          // hide non-matching rows
+          r.classList.toggle("hidden", !isMatch);
+          // highlight only when a specific day is chosen
+          if (val === "ALL") {
+            r.classList.remove("visible");
+          } else {
+            r.classList.toggle("visible", isMatch);
+          }
+        });
+      });
+      // trigger initial state (ALL)
+      select.dispatchEvent(new Event("change"));
+    </script>
+  </body>
+</html>
