@@ -1,0 +1,62 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fbfc;
+  color: #333;
+  padding: 20px;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+.controls {
+  text-align: center;
+  margin: 20px 0;
+}
+#daySelect {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+#daySelect:focus {
+  outline: none;
+  border-color: #007acc;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+th {
+  background: #e6f2fa;
+  font-weight: 600;
+}
+/* Cell hover effect */
+td:hover {
+  background: #f0f8ff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* Highlight selected day's cells */
+tbody tr.visible td {
+  background: #d0eaff;
+}
+tr.hidden {
+  display: none;
+}
+.note {
+  margin-top: 20px;
+  text-align: right;
+  font-style: italic;
+}
