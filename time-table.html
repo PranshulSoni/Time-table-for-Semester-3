@@ -121,14 +121,14 @@
       const timeTableRows = document.querySelectorAll("#timetable tbody tr");
       jsdaySelect.addEventListener("change", () => {
         const value = jsdaySelect.value;
-        timeTableRows.forEach((r) => {
+        timeTableRows.forEach((row) => {
           const isMatch =
-            value === "ALL" || r.getAttribute("data-day") === value;
-          r.classList.toggle("hidden", !isMatch);
+            value === "ALL" || row.getAttribute("data-day") === value;
+          row.classList.toggle("hidden", !isMatch);
           if (value === "ALL") {
-            r.classList.remove("visible");
+            row.classList.remove("visible");
           } else {
-            r.classList.toggle("visible", isMatch);
+            row.classList.toggle("visible", isMatch);
           }
         });
       });
